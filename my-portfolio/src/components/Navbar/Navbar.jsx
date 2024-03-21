@@ -4,14 +4,22 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSun, faMoon} from "@fortawesome/free-solid-svg-icons";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 
-const Navbar = () => {
+const Navbar = ({theme,setTheme}) => {
+  const toggleTheme = () => {
+    if(theme === 'light'){
+      setTheme('dark');
+    }else{
+      setTheme('light');
+    }
+  }
   return (
     <div className="navbar">
       
-      <h1 className="logo" >@puroihitamann</h1>
+      <h1 className={theme == "light" ? "logo-light" : "logo-dark"} >@purohitamann</h1>
       <ul>
         <li>Home</li>
         <li>Projects</li>
+        <li>Blog</li>
         <li>Connect</li>
       </ul>
 
@@ -21,7 +29,7 @@ const Navbar = () => {
       </div>
 
 
-      <FontAwesomeIcon className="toggle-icon" icon={faMoon} />
+      <FontAwesomeIcon onClick={() => toggleTheme()} className="toggle-icon fontAwesome"  icon={theme == "light" ? faMoon : faSun } />
     </div>
   );
 };
