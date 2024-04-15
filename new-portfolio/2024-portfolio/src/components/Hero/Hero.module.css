@@ -1,0 +1,126 @@
+@import '../../../src/vars.css';
+
+.container{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 100px;
+    z-index: 1;
+    margin-left: 10%;
+    margin-right: 10%;
+
+}
+
+.content{
+    display:flex ;
+    flex-direction: column;
+    align-items: flex-start;
+    color: var(--color-text);
+    z-index: 1;
+}
+
+.title{
+    font-size: 110px;
+    font-weight: 900;
+    margin-bottom: 20px;
+    font-family: var(--font-montserrat);
+    background-color: linear-gradient(90deg, rgb(0, 0, 0) 70%, rgb(255, 253, 253) 120%);
+    -webkit-text-fill-color: var(--color-text);
+    -webkit-background-clip: text;
+
+}
+
+.description{
+    font-size: 20px;
+    font-family: var(--font-montserrat);
+    margin-bottom: 30px;
+    font-weight: 400;
+    width: 706px;
+    font-size: 20px;
+}
+
+.social{
+    display: flex;
+    gap: 20px;
+    width: 40px;
+    height: 40px;
+    width: 100%;
+    
+}
+
+.social a{
+    color: var(--color-bg);
+    background-color: var(--color-text);
+    padding: 10px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 20px;
+    transition: 0.3s;
+    font-weight: 200;
+    box-shadow: 0px 0px 4px 0px rgba(0,0,0,0.25);
+    
+
+}
+
+.HeroImg{
+    width: 500px;
+    height: 500px;
+    margin-right: 0px;
+    z-index: 1;
+    animation-name: floating;
+    animation-duration: 3s;
+    animation-iteration-count:infinite ;
+    animation-timing-function:ease-in-out;
+}
+
+@keyframes floating {
+    0% {
+        transform: translate(0,0px);
+    }
+    50% {
+        transform: translate(0,10px);
+    }
+    100% {
+        transform: translate(0,-0px);
+    }
+}
+
+.topBlur{
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    min-width: 350px;
+    background-color: var(--color-blur-light);
+    top: -276px;
+    left: 488px;
+    border: 764px;
+    filter: blur(200px);
+    z-index: 0;
+}
+
+.leftBlur{
+    position: absolute;
+    width: 678px;
+    height: 586px;
+    min-width: 350px;
+    background-color: var(--color-blur-dark);
+    top: 658px;
+    left: -11px;
+    border: 764px;
+    filter: blur(200px);
+    z-index: 0;
+}
+
+.rightBlur{
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    min-width: 350px;
+    background-color: var(--color-blur-dark);
+    top: 398px;
+    left: 942px;
+    border: 764px;
+    filter: blur(200px);
+    z-index: 0;
+}
